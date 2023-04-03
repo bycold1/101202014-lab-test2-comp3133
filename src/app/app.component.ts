@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'lab-test2-comp3133';
+  selectedYear: string = '';
+
+  onYearSelected(year: string): void {
+    this.selectedYear = year;
+  }
 }

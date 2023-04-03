@@ -1,0 +1,38 @@
+.mission-list {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 170px);
+  }
+  
+  .missions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 0 -10px; 
+  }
+  .mission {
+    width: calc(25% - 15px);
+    padding: 10px;
+    box-sizing: border-box; 
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  img {
+    max-width: 300px; 
+    display: block;
+  }
+  
+  .title {
+    font-weight: bold;
+    color: #444;
+  }
+  
+  .data {
+    color: #777;
+  }
+  

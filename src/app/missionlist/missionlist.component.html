@@ -1,8 +1,18 @@
-<p>missionlist works!</p>
-<div *ngFor="let mission of missions">
-    <h3>{{ mission.mission_name }}</h3>
-    <p>Launch Year: {{ mission.launch_year }}</p>
-    <p>Details: {{ mission.details }}</p>
-    <img [src]="mission.links.mission_patch_small" alt="Mission Patch">
+<div class="mission-list">
+    <h2>Mission List</h2>
+    <div class="missions">
+      <div class="mission" *ngFor="let mission of missions">
+        <img [src]="mission.links.mission_patch_small" [alt]="mission.mission_name + ' mission patch'" />
+        <h3>{{ mission.mission_name }}</h3>
+        <p class="title">Mission IDs:</p>
+        <p class="data">{{ mission.mission_id.join(', ') || 'No data' }}</p>
+        <p class="title">Launch year:</p>
+        <p class="data">{{ mission.launch_year }}</p>
+        <p class="title">Successful launch:</p>
+        <p class="data">{{ mission.launch_success ? 'Yes' : 'No' }}</p>
+        <p class="title">Successful land:</p>
+        <p class="data">{{ mission.rocket.first_stage.cores[0].land_success ? 'Yes' : 'No data' }}</p>
+      </div>
+    </div>
   </div>
   
