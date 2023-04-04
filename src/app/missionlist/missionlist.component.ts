@@ -8,8 +8,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MissionlistComponent implements OnInit {
   @Input() filteredYear: number | null = null;
-  @Input() filteredLaunch: boolean | null = null; // Add this line
-  @Input() filteredLand: boolean | null = null; // Add this line
+  @Input() filteredLaunch: boolean | null = null; 
+  @Input() filteredLand: boolean | null = null; 
   missions: any[] = [];
 
   constructor(private http: HttpClient) { }
